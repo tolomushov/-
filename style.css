@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('1080x1920.jpg') no-repeat center center fixed; /* Подставьте путь к вашей картинке */
+    background-size: cover; /* Картинка будет покрывать весь экран */
+    background-position: center; /* Центрируем картинку */
+    background-attachment: fixed; /* Эффект параллакса при прокрутке */
+    height: 100vh; /* Задаём высоту экрана */
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Прозрачный фон для контента */
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.bio {
+    font-size: 18px;
+    color: #dcdcdc;
+}
+
+.social-links, .additional-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-button, .additional-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    padding: 14px 30px;
+    font-size: 18px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.social-button:hover, .additional-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.additional-button {
+    background-color: #333;
+    border-color: #aaa;
+}
+
+.additional-button:hover {
+    background-color: #444;
+}
+
+/* Адаптивность для мобильных экранов */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Для мобильных картинка будет целиком видна */
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bio {
+        font-size: 16px;
+    }
+
+    .social-button, .additional-button {
+        font-size: 16px;
+        width: 220px;
+    }
+}
+
+/* Очень маленькие экраны (например, телефоны в портретном режиме) */
+@media (max-width: 480px) {
+    body {
+        background-size: contain; /* Для маленьких экранов картинка будет целиком видна */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    .social-button, .additional-button {
+        font-size: 14px;
+        width: 200px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Экранные устройства с очень большой шириной (например, большие мониторы) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .social-button, .additional-button {
+        width: 300px;
+        font-size: 20px;
+    }
+}
